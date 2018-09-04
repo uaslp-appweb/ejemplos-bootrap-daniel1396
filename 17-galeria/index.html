@@ -16,143 +16,30 @@
 <body>
     <div class="container">
         <h1 class="text-center">Galeria de imagenes</h1>
-        <div class="card-columns">
-            <div class="card">
-                <a href="#modal1" data-toggle="modal">
-                    <img src="img/1.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal1">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal2" data-toggle="modal">
-                    <img src="img/2.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal2">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal3" data-toggle="modal">
-                    <img src="img/3.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal3">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal4" data-toggle="modal">
-                    <img src="img/4.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal4">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal5" data-toggle="modal">
-                    <img src="img/5.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal5">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal6" data-toggle="modal">
-                    <img src="img/6.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal6">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal7" data-toggle="modal">
-                    <img src="img/7.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal7">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/7.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal8" data-toggle="modal">
-                    <img src="img/8.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal8">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/8.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal9" data-toggle="modal">
-                    <img src="img/9.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal9">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/9.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal10" data-toggle="modal">
-                    <img src="img/10.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal10">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/10.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="#modal11" data-toggle="modal">
-                    <img src="img/11.jpg" alt="" class="card-img-top">
-                </a>
-                <div class="modal fade" id="modal11">
-                    <div class="modal-dialog  modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <img class="img-fluid" src="img/11.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card-columns" id="galeria">
+          
         </div>
         <!--Card-Columns-->
-
     </div>
+
+    <script>
+        var galeria = document.getElementById('galeria');
+        for(imagen=1; imagen < 12; imagen++){
+        galeria.innerHTML += `  <div class="card">
+                <a href="#modal${imagen}" data-toggle="modal">
+                    <img src="img/${imagen}.jpg" alt="" class="card-img-top">
+                </a>
+                <div class="modal fade" id="modal${imagen}">
+                    <div class="modal-dialog  modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <img class="img-fluid" src="img/${imagen}.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+        
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
